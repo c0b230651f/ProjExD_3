@@ -147,7 +147,7 @@ class Score:
     """
     def __init__(self):
         """
-        
+        スコアの初期設定を行う関数
         引数 screen：画面Surface
         """
         self.fonto = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
@@ -156,10 +156,10 @@ class Score:
 
     def update(self, screen):
         """
-        
+        スコアを描画する関数
         引数 screen：画面Surface
         """
-        self.img = self.fonto.render(f"スコア:{self.score}", 0, (0, 0, 255))
+        self.img = self.fonto.render(f"スコア:{self.score}", 0, (0, 0, 255))  # スコア表示
         screen.blit(self.img, [100, HEIGHT-50])
 
 def main():
@@ -201,7 +201,7 @@ def main():
                     bird.change_img(6, screen)
                     score.score += 1
                     pg.display.update()
-                if check_bound(beam.rct) != (True,True):
+                if check_bound(beam.rct) != (True,True):  # ビームが画面外に出たなら
                     beams[i] = None
                     print(beams)
                 bombs = [bomb for bomb in bombs if bomb is not None]
