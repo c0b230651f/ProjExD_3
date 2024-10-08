@@ -203,11 +203,9 @@ def main():
                     pg.display.update()
                 if check_bound(beam.rct) != (True,True):  # ビームが画面外に出たなら
                     beams[i] = None
-                    print(beams)
                 bombs = [bomb for bomb in bombs if bomb is not None]
                 beams = [beam for beam in beams if beam is not None]
         
-        print(len(beams),len(bombs))
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)
         for beam in beams: 
