@@ -154,7 +154,7 @@ class Score:
         self.img = self.fonto.render("スコア", 0, (0, 0, 255))
         self.score = 0
 
-    def update(self, screen):
+    def update(self, screen: pg.Surface):
         """
         スコアを描画する関数
         引数 screen：画面Surface
