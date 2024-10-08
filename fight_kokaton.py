@@ -162,6 +162,7 @@ class Score:
         self.img = self.fonto.render(f"スコア:{self.score}", 0, (0, 0, 255))  # スコア表示
         screen.blit(self.img, [100, HEIGHT-50])
 
+
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
     screen = pg.display.set_mode((WIDTH, HEIGHT))    
